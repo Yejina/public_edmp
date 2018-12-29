@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.example.croppersample"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat">
+        <activity
+            android:name="com.vish.imagetotext.ocr.sample.Intro"
+            android:label="@string/app_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.vish.imagetotext.ocr.sample.main"></activity>
+        <activity android:name="com.vish.imagetotext.ocr.sample.Add_item">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.vish.imagetotext.ocr.sample.checkList">
+        </activity>
+        <receiver android:name="com.vish.imagetotext.ocr.sample.AlarmReceiver"></receiver>
+
+        <activity android:name="com.vish.imagetotext.ocr.sample.ShoppingActivity"/>
+        <activity android:name="com.vish.imagetotext.ocr.sample.delete_shopping"/>
+        <activity android:name="com.vish.imagetotext.ocr.sample.saveActivity"></activity>
+        <receiver android:name=".AlarmReceiver"  android:process=":remote"></receiver>
+
+
+
+     <!--   <activity android:name="com.vish.imagetotext.ocr.sample.Add_item">
+        </activity>-->
+        <activity android:name="com.vish.imagetotext.ocr.sample.Modify_item">
+        </activity>
+        <activity android:name="com.vish.imagetotext.ocr.sample.CropResultActivity">
+        </activity>
+        <activity android:name="com.vish.imagetotext.ocr.CropImageActivity">
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
